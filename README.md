@@ -147,32 +147,7 @@ Here's a detailed list of the key functions and methods in `run_TkInter.py`:
     
     -   **Description**: Reads a previously saved food log from a specified file.
     -   **UI Interaction**: When the user clicks the "Load" button.        
-
-### Event Handling
-
--   `on_select(self, event)`: Handles the selection of an entry in the listbox.
-    -   **Parameters**: `event` (Tkinter event object)
-    -   **Returns**: None
-    -   **Description**: Populates the entry fields with the selected food log entry for viewing or editing.
-    -   **UI Interaction**: When the user clicks on an entry in the listbox.        
-
-### Utility Functions
-
--   `clear_fields(self)`: Clears all the input fields.
-    
-    -   **Parameters**: None
-    -   **Returns**: None
-    -   **Description**: Resets the entry fields to their default state.
-    -   **UI Interaction**: When the user clicks the "Clear" button.
         
--   `update_listbox(self)`: Updates the listbox with the current food log entries.
-    
-    -   **Parameters**: None
-    -   **Returns**: None
-    -   **Description**: Refreshes the listbox to reflect the current state of the food log.
-    -   **UI Interaction**: Automatically updates after add, edit, or delete operations.
-        
-
 ## Contributing
 
 Contributions are welcome! To contribute to the project, follow these steps:
