@@ -93,44 +93,58 @@ Here's a detailed list of the key functions and methods in `run_TkInter.py`:
 
 ### Initialization and Setup
 
--   `__init__(self, master)`: Initializes the main application window and its widgets.
+-   `__init__(self, root)`: Initializes the main application window and its widgets.
     -   **UI Elements**: Sets up the main window with input fields for food name, calories, and date, as well as buttons for adding, editing, and deleting entries, and a listbox for displaying the food log.
         
 
 ### Data Management
 
--   `add_food_entry(self)`: Adds a new food entry to the log.
+-   `create_table`: Creats a table for the food log.
     
-    -   **Parameters**: None
-    -   **Returns**: None
-    -   **Description**: Retrieves the input from the entry fields and appends it to the food log.
-    -   **UI Interaction**: When the user fills in the food details and clicks the "Add" button.
+    -   **Description**: Stores the input from the entry fields of the food log.
+
+-   `setup_widgets`: Sets application structure.
+    
+    -   **Description**: Sets up the tkinter grid structure with labels fields and buttons.
+
+-   `preview_camera`: Sets up and initalizes the camera function.
+    
+    -   **Description**: Sets up the application to pull back the provided camera for barcode scanning.
+  
+-   `lookup_food`: Send the API request to have the food returned with servings from EDAMAM.
+    
+    -   **Parameters**: Barcode
+    -   **Returns**: JSON of the food and its servings
+    -   **Description**: Retrieves the information from the API and appends it to the appropriate text fields.
         
--   `edit_food_entry(self)`: Edits an existing food entry.
+-   `log_food`: Adds a food entry.
     
-    -   **Parameters**: None
-    -   **Returns**: None
-    -   **Description**: Modifies the selected food entry based on the user's input in the entry fields.
-    -   **UI Interaction**: When the user selects an entry from the listbox, edits the details, and clicks the "Edit" button.
+    -   **Parameters**: Food Name, Serving, Barcode
+    -   **Description**: Adds the selected food entry based on the user's input in the entry fields.
+    -   **UI Interaction**: When the user selects an entry from the listbox, edits the details, and clicks the "Log Food" button.
         
--   `delete_food_entry(self)`: Deletes a selected food entry.
-    
-    -   **Parameters**: None
-    -   **Returns**: None
+-   `remove_item`: Deletes a selected food entry.
+
     -   **Description**: Removes the selected entry from the food log.
-    -   **UI Interaction**: When the user selects an entry from the listbox and clicks the "Delete" button.
-        
--   `save_to_file(self)`: Saves the food log to a file.
+    -   **UI Interaction**: When the user selects an entry from the listbox and clicks the "Remove Selected Item" button.
+
+-   `autocomplete_food_name`: returns a lits of food names (must have 3 or more characters).
+  
+    -   **Parameters**: Food Name
+    -   **Returns**: JSON of the food name listing from EDAMAM
+    -   **Description**: Removes the disabled state of the button.
+
+-   `enable_lookup_button`: enables the Lookup Barcode Butoon.
     
-    -   **Parameters**: None
-    -   **Returns**: None
+    -   **Description**: Removes the disabled state of the button.
+        
+-   `export_all_to_file(self)`: Saves the food log to a file.
+    
     -   **Description**: Writes the current food log to a specified file for persistent storage.
     -   **UI Interaction**: When the user clicks the "Save" button.
             
--   `load_from_file(self)`: Loads the food log from a file.
+-   `load_entries`: Loads the food log from a file.
     
-    -   **Parameters**: None
-    -   **Returns**: None
     -   **Description**: Reads a previously saved food log from a specified file.
     -   **UI Interaction**: When the user clicks the "Load" button.        
 
