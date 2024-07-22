@@ -38,12 +38,7 @@ To install and run the Food Log Application, follow these steps:
  ```bash
     cd foodlogapp
  ``` 
-3. (Optional) Create and activate a virtual environment:
- ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-``` 
-4. Install the required dependencies using the file ```Package Installation.py``` or 
+3. Install the required dependencies using the file ```Package Installation.py``` or 
  ```python
   import subprocess
   import sys
