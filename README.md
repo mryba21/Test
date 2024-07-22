@@ -1,8 +1,4 @@
-
-``# Food Log Application
-
-## Overview
-
+# Food Log Application
 The Food Log Application is a TkInter-based application designed to help users log and track their daily food intake. This repository contains the source code for the application, which is primarily implemented in Python using the TkInter library for the GUI.
 
 ## Table of Contents
